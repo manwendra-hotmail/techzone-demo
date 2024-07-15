@@ -1,0 +1,18 @@
+---
+openapi: 3.0.3
+info:
+  title: Inventory API
+  version: 1.0.0
+servers:
+- url: https://coolstore-inventory-quarkus-coolstore-dev.apps.cluster-bjwf7.sandbox185.opentlc.com/
+  description: (RHDH component deployment)
+- url: http://localhost:8080
+  description: (localhost development / testing)
+paths:
+  /api/inventory/329299:
+    get:
+      tags:
+      - Example item
+      responses:
+        "200":
+          description: OK
