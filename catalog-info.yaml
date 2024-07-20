@@ -4,12 +4,12 @@ metadata:
   name: coolstore-inventory-quarkus
   description: "Inventory microservice for Coolstore"
   annotations:
-    argocd/app-selector: rht-gitops.com/janus-argocd=coolstore-inventory-quarkus-bootstrap
+    #argocd/app-selector: rht-gitops.com/janus-argocd=coolstore-inventory-quarkus-bootstrap
     backstage.io/kubernetes-id: coolstore-inventory-quarkus
-    janus-idp.io/tekton: coolstore-inventory-quarkus
-    backstage.io/source-location: url:https://gitlab-gitlab.apps.cluster-bjwf7.sandbox185.opentlc.com/development/coolstore-inventory-quarkus
-    backstage.io/techdocs-ref: url:https://gitlab-gitlab.apps.cluster-bjwf7.sandbox185.opentlc.com/development/coolstore-inventory-quarkus
-    gitlab.com/project-slug: development/coolstore-inventory-quarkus
+    #janus-idp.io/tekton: coolstore-inventory-quarkus
+    backstage.io/source-location: url:https://github.com/manwendra-hotmail/techzone-demo.git
+    backstage.io/techdocs-ref: url:https://github.com/manwendra-hotmail/techzone-demo.git
+    #gitlab.com/project-slug: development/coolstore-inventory-quarkus
     quay.io/repository-slug: "quayadmin/coolstore-inventory-quarkus"
   tags:
     - java
