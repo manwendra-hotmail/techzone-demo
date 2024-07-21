@@ -5,7 +5,7 @@ metadata:
   description: "Inventory microservice for Coolstore"
   annotations:
     #argocd/app-selector: rht-gitops.com/janus-argocd=coolstore-inventory-quarkus-bootstrap
-    #backstage.io/kubernetes-id: coolstore-inventory-quarkus
+    backstage.io/kubernetes-id: coolstore-inventory-quarkus
     backstage.io/kubernetes-namespace: rhdh-demo
     #janus-idp.io/tekton: coolstore-inventory-quarkus
     backstage.io/source-location: url:https://github.com/manwendra-hotmail/techzone-demo.git
