@@ -1,8 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: coolstore-inventory-quarkus
-  description: "Inventory microservice for Coolstore"
+  name: retail-store
+  description: "Inventory microservice for retail store"
   annotations:
     #argocd/app-selector: rht-gitops.com/janus-argocd=coolstore-inventory-quarkus-bootstrap
     backstage.io/kubernetes-id: coolstore-inventory-quarkus
