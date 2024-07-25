@@ -17,7 +17,7 @@ metadata:
     - quarkus
     - maven
     - demo
-    - coolstore
+    - retailstore
   links:
     - url: https://console-openshift-console.apps.cluster-bjwf7.sandbox185.opentlc.com/dev-pipelines/ns/coolstore-dev/
       title: OpenShift Pipelines
@@ -32,16 +32,16 @@ spec:
   type: service
   lifecycle: production
   owner: "user1"
-  system: coolstore-coolstore
+  system: retail-store
   providesApis:
-    - coolstore-inventory-quarkus-api
+    - retail-store-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
-  name: coolstore-coolstore
+  name: retail-store
   tags:
-    - coolstore
+    - retailstore
     - demo
 spec:
   owner: "user1"
@@ -49,12 +49,12 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: coolstore-inventory-quarkus-api
-  description: "Inventory microservice for Coolstore"
+  name: retail-store-api
+  description: "Inventory microservice for retail store"
 spec:
   type: openapi
   lifecycle: production
   owner: "user1"
-  system: coolstore-coolstore
+  system: retail-store
   definition:
     $text: ./openapi.yaml
