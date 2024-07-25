@@ -403,7 +403,7 @@ paths:
             '404':
                 description: 'Not Found'
         deprecated: false
-/products/add:
+  /products/add:
     post:
         tags:
             - product-controller
