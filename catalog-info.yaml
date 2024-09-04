@@ -31,7 +31,7 @@ metadata:
 spec:
   type: service
   lifecycle: production
-  owner: "user1"
+  owner: "manwendra-hotmail"
   system: retail-store
   providesApis:
     - retail-store-api
@@ -54,7 +54,7 @@ metadata:
 spec:
   type: openapi
   lifecycle: production
-  owner: "user1"
+  owner: "manwendra-hotmail"
   system: retail-store
   definition:
     $text: ./openapi.yaml
