@@ -44,7 +44,7 @@ metadata:
     - retailstore
     - demo
 spec:
-  owner: "user1"
+  owner: "manwendra-hotmail"
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
