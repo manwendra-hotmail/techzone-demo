@@ -45,15 +45,15 @@ metadata:
 spec:
   owner: "dev-hub-team"
 ---
-apiVersion: backstage.io/v1alpha1
-kind: API
-metadata:
-  name: backstage-api
-  description: "Inventory microservice"
-spec:
-  type: openapi
-  lifecycle: production
-  owner: "dev-hub-team"
-  system: pipeline
-  definition:
-    $text: ./openapi.yaml
+#apiVersion: backstage.io/v1alpha1
+#kind: API
+#metadata:
+#  name: backstage-api
+#  description: "Inventory microservice"
+#spec:
+#  type: openapi
+#  lifecycle: production
+#  owner: "dev-hub-team"
+#  system: pipeline
+#  definition:
+#    $text: ./openapi.yaml
