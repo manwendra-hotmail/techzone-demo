@@ -8,7 +8,7 @@ metadata:
     backstage.io/kubernetes-id: tekton-demo
     backstage.io/kubernetes-namespace: backstage
     janus-idp.io/tekton-enabled: 'true'
-    backstage.io/kubernetes-label-selector: 'app=web'
+    backstage.io/kubernetes-label-selector: 'backstage.io/kubernetes-id=tekton-demo'
     #app.openshift.io/connects-to: '[{"apiVersion": apps/v1,"kind": Deployment}]'
     app.openshift.io/connects-to: '[{"apiVersion":"apps.openshift.io/v1","kind":"Deployment"}]'
     backstage.io/source-location: url:https://github.com/jay2tinku/techzone-pipeline-demo.git
