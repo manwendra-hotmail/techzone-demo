@@ -13,6 +13,7 @@ metadata:
     janus-idp.io/tekton: deploy-app-pipeline
     tektonci/build-namespace: backstage
     argocd/app-name: deploy-app-pipeline
+    tekton.dev/pipeline: "true"
   tags:
     - tekton
     - pipeline
