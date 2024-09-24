@@ -5,7 +5,7 @@ metadata:
   description: "Deploy App with OpenShift Pipeline"
   annotations:
     #argocd/app-selector: rht-gitops.com/janus-argocd=coolstore-inventory-quarkus-bootstrap
-    backstage.io/kubernetes-id: backstage
+    backstage.io/kubernetes-id: deploy-app-pipeline
     backstage.io/kubernetes-namespace: backstage
     janus-idp.io/tekton-enabled: 'true'
     backstage.io/kubernetes-label-selector: 'app=web'
@@ -17,7 +17,7 @@ metadata:
     argocd/app-name: deploy-app-pipeline
     tekton.dev/pipeline: "true"
   labels:
-    backstage.io/kubernetes-id: backstage
+    backstage.io/kubernetes-id: deploy-app-pipeline
   tags:
     - tekton
     - pipeline
