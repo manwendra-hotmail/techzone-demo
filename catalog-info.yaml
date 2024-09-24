@@ -1,60 +1,60 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: deploy-app-pipeline
-  description: "Deploy App with OpenShift Pipeline"
+  name: retail-store
+  description: "Inventory microservice for retail store"
   annotations:
     #argocd/app-selector: rht-gitops.com/janus-argocd=coolstore-inventory-quarkus-bootstrap
-    backstage.io/kubernetes-id: tekton-demo
-    backstage.io/kubernetes-namespace: backstage
-    janus-idp.io/tekton-enabled: 'true'
-    backstage.io/kubernetes-label-selector: 'app=web'
-    #app.openshift.io/connects-to: '[{"apiVersion": apps/v1,"kind": Deployment}]'
-    app.openshift.io/connects-to: '[{"apiVersion":"apps.openshift.io/v1","kind":"Deployment"}]'
-    backstage.io/source-location: url:https://github.com/jay2tinku/techzone-pipeline-demo.git
-    backstage.io/techdocs-ref: url:https://github.com/jay2tinku/techzone-pipeline-demo.git
-    janus-idp.io/tekton: backstage
-    tektonci/build-namespace: backstage
-    argocd/app-name: backstage
-    tekton.dev/pipeline: "true"
-  labels:
-    backstage.io/kubernetes-id: tekton-demo
+    backstage.io/kubernetes-id: retail-store
+    backstage.io/kubernetes-namespace: retail-store
+    #janus-idp.io/tekton: coolstore-inventory-quarkus
+    backstage.io/source-location: url:https://github.com/manwendra-hotmail/techzone-demo.git
+    backstage.io/techdocs-ref: url:https://github.com/manwendra-hotmail/techzone-demo.git
+    #gitlab.com/project-slug: development/coolstore-inventory-quarkus
+    quay.io/repository-slug: "quayadmin/coolstore-inventory-quarkus"
   tags:
-    - tekton
-    - pipeline
-    - tekton
+    - java
+    - quarkus
+    - maven
     - demo
+    - retailstore
   links:
-    - url: https://console-openshift-console.apps.66a64ff6d70fa4001ee0caae.ocp.techzone.ibm.com/dev-pipelines/ns/backstage
+    - url: https://console-openshift-console.apps.66a64ff6d70fa4001ee0caae.ocp.techzone.ibm.com/k8s/ns/retail-store/
       title: OpenShift Pipelines
+      icon: web
+    - url: https://console-openshift-console.apps.66a64ff6d70fa4001ee0caae.ocp.techzone.ibm.com/#https://github.com/manwendra-hotmail/techzone-demo.git
+      title: OpenShift Dev Spaces (VS Code)
+      icon: web
+    - url: https://devspaces.apps.cluster-bjwf7.sandbox185.opentlc.com/#https://gitlab-gitlab.apps.cluster-bjwf7.sandbox185.opentlc.com/development/coolstore-inventory-quarkus?che-editor=che-incubator/che-idea/latest
+      title: OpenShift Dev Spaces (JetBrains IntelliJ)
       icon: web
 spec:
   type: service
   lifecycle: production
-  owner: "dev-hub-team"
-  system: pipeline
+  owner: "manwendra-hotmail"
+  system: retail-store
   providesApis:
-    - pipeline-api
+    - retail-store-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
-  name: backstage
+  name: retail-store
   tags:
-    - pipeline
+    - retailstore
     - demo
 spec:
-  owner: "dev-hub-team"
+  owner: "manwendra-hotmail"
 ---
-#apiVersion: backstage.io/v1alpha1
-#kind: API
-#metadata:
-#  name: backstage-api
-#  description: "Inventory microservice"
-#spec:
-#  type: openapi
-#  lifecycle: production
-#  owner: "dev-hub-team"
-#  system: pipeline
-#  definition:
-#    $text: ./openapi.yaml
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: retail-store-api
+  description: "Inventory microservice for retail store"
+spec:
+  type: openapi
+  lifecycle: production
+  owner: "manwendra-hotmail"
+  system: retail-store
+  definition:
+    $text: ./openapi.yaml
