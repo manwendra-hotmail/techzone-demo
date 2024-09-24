@@ -7,6 +7,8 @@ metadata:
     #argocd/app-selector: rht-gitops.com/janus-argocd=coolstore-inventory-quarkus-bootstrap
     backstage.io/kubernetes-id: backstage
     backstage.io/kubernetes-namespace: backstage
+    janus-idp.io/tekton-enabled: 'true'
+    backstage.io/kubernetes-label-selector: 'app=web'
     backstage.io/source-location: url:https://github.com/jay2tinku/techzone-pipeline-demo.git
     backstage.io/techdocs-ref: url:https://github.com/jay2tinku/techzone-pipeline-demo.git
     quay.io/repository-slug: "quayadmin/coolstore-inventory-quarkus"
@@ -14,6 +16,8 @@ metadata:
     tektonci/build-namespace: backstage
     argocd/app-name: deploy-app-pipeline
     tekton.dev/pipeline: "true"
+  labels:
+    backstage.io/kubernetes-id: backstage
   tags:
     - tekton
     - pipeline
