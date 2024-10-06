@@ -58,13 +58,13 @@ spec:
   system: retail-store
   definition:
     $text: ./openapi.yaml
-# ---
-# apiVersion: backstage.io/v1alpha1
-# kind: Dimain
-# metadata:
-#   name: retail
-#   tags:
-#     - retailstore
-#     - demo
-# spec:
-#   owner: "manwendra-hotmail"
+---
+apiVersion: backstage.io/v1alpha1
+kind: Dimain
+metadata:
+  name: retail
+  tags:
+    - retailstore
+    - demo
+spec:
+  owner: "manwendra-hotmail"
