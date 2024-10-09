@@ -8,8 +8,8 @@ metadata:
     backstage.io/kubernetes-id: retail-store
     backstage.io/kubernetes-namespace: retail-store
     #janus-idp.io/tekton: coolstore-inventory-quarkus
-    backstage.io/source-location: url:https://github.com/manwendra-hotmail/techzone-demo.git
-    backstage.io/techdocs-ref: url:https://github.com/manwendra-hotmail/techzone-demo.git
+    backstage.io/source-location: url:https://github.com/rh-dev-hub/techzone-demo.git
+    backstage.io/techdocs-ref: url:https://github.com/rh-dev-hub/techzone-demo.git
     #gitlab.com/project-slug: development/coolstore-inventory-quarkus
     quay.io/repository-slug: "quayadmin/coolstore-inventory-quarkus"
   tags:
@@ -22,7 +22,7 @@ metadata:
     - url: https://console-openshift-console.apps.66a64ff6d70fa4001ee0caae.ocp.techzone.ibm.com/k8s/ns/retail-store/
       title: OpenShift Pipelines
       icon: web
-    - url: https://console-openshift-console.apps.66a64ff6d70fa4001ee0caae.ocp.techzone.ibm.com/#https://github.com/manwendra-hotmail/techzone-demo.git
+    - url: https://console-openshift-console.apps.66a64ff6d70fa4001ee0caae.ocp.techzone.ibm.com/#https://github.com/rh-dev-hub/techzone-demo.git
       title: OpenShift Dev Spaces (VS Code)
       icon: web
     - url: https://devspaces.apps.cluster-bjwf7.sandbox185.opentlc.com/#https://gitlab-gitlab.apps.cluster-bjwf7.sandbox185.opentlc.com/development/coolstore-inventory-quarkus?che-editor=che-incubator/che-idea/latest
@@ -31,7 +31,7 @@ metadata:
 spec:
   type: service
   lifecycle: production
-  owner: "manwendra-hotmail"
+  owner: "rh-dev-hub"
   system: retail-store
   providesApis:
     - retail-store-api
@@ -44,7 +44,7 @@ metadata:
     - retailstore
     - demo
 spec:
-  owner: "manwendra-hotmail"
+  owner: "rh-dev-hub"
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
@@ -54,7 +54,7 @@ metadata:
 spec:
   type: openapi
   lifecycle: production
-  owner: "manwendra-hotmail"
+  owner: "rh-dev-hub"
   system: retail-store
   definition:
     $text: ./openapi.yaml
@@ -67,4 +67,4 @@ spec:
 #     - retailstore
 #     - demo
 # spec:
-#   owner: "manwendra-hotmail"
+#   owner: "rh-dev-hub"
